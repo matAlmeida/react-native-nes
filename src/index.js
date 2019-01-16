@@ -1,7 +1,5 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { Font } from "expo";
-
 import Container from "./components/Container";
 
 function App() {
