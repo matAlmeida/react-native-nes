@@ -1,16 +1,18 @@
 import React from "react";
 import { View } from "react-native";
 import RoundedBorder from "./objects/RoundedBorder";
+import SquaredBorder from "./objects/SquaredBorder";
 import Layout from "../constants/Layout";
 
-function Container({ width = 1, children, center, dark }) {
+function Container({ width = 1, children, center, dark, round, title }) {
   const componentWidth = Layout.width * width;
   const strokeColor = dark ? "white" : "black";
   const backgroundColor = dark ? "black" : "none";
 
   return (
-    <View style={{ backgroundColor }}>
-      <RoundedBorder width={width} dark={dark} />
+    <View style={{ backgroundColor, padding: 2 }}>
+      {!!round && <RoundedBorder width={width} dark={dark} />}
+      {!round && <SquaredBorder width={width} dark={dark} />}
       <View
         style={{
           margin: 0,
@@ -25,7 +27,8 @@ function Container({ width = 1, children, center, dark }) {
       >
         {children}
       </View>
-      <RoundedBorder width={width} dark={dark} flip />
+      {!!round && <RoundedBorder width={width} dark={dark} flip />}
+      {!round && <SquaredBorder width={width} dark={dark} flip />}
     </View>
   );
 }
