@@ -8,8 +8,25 @@ function App() {
     <View
       style={{ paddingTop: 25, alignItems: "center", justifyContent: "center" }}
     >
-      <Container width={0.9} center dark round>
-        <Text style={{ color: "white" }}>Oi</Text>
+      <Container width={0.9} center>
+        <Text style={{ color: "black" }}>
+          Good morning. Thou hast had a good night's sleep, I hope
+        </Text>
+      </Container>
+      <Container width={0.9} round>
+        <Text style={{ color: "black" }}>
+          Good morning. Thou hast had a good night's sleep, I hope
+        </Text>
+      </Container>
+      <Container width={0.9} dark>
+        <Text style={{ color: "white" }}>
+          Good morning. Thou hast had a good night's sleep, I hope
+        </Text>
+      </Container>
+      <Container width={0.9} dark round>
+        <Text style={{ color: "white" }}>
+          Good morning. Thou hast had a good night's sleep, I hope
+        </Text>
       </Container>
     </View>
   );
